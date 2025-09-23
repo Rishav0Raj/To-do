@@ -18,10 +18,13 @@ const model = mongoose.model('tasks',schema)
 const app = express()
 
 app.use(express.json())
-app.use(cors({
-  origin: ["https://gleaming-llama-b3d297.netlify.app/"], // The URL of your deployed frontend
-  credentials: true
-}));
+const corsOptions = {
+  origin: "https://gleaming-llama-b3d297.netlify.app",
+  credentials: true,
+  optionsSuccessStatus: 200 
+};
+
+app.use(cors(corsOptions));
 app.get('/tasks',async(req,res)=>{
     try {
         const tasks = await model.find({})
