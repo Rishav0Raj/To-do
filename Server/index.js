@@ -18,7 +18,7 @@ const model = mongoose.model('tasks',schema)
 const app = express()
 
 app.use(express.json())
-apapp.use(cors({
+app.use(cors({
   origin: ["https://gleaming-llama-b3d297.netlify.app/"], // The URL of your deployed frontend
   credentials: true
 }));
