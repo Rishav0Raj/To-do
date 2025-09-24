@@ -19,7 +19,7 @@ const app = express()
 
 app.use(express.json())
 const corsOptions = {
-  origin: "https://gleaming-llama-b3d297.netlify.app",
+  origin: "https://simpleto-dolist-project.netlify.app",
   credentials: true,
   optionsSuccessStatus: 200 
 };
